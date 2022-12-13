@@ -1,0 +1,16 @@
+@startuml
+|Kreditur|
+start
+:login;
+|Mobile App|
+if(submited personal info ?) is (true) then
+:show loan products;
+stop;
+else (false)
+:show form personal information;
+|Kreditur|
+:input personal information, work information, emergency contact;
+|Mobile App|
+:Save personal information, work information, emergency contact;
+stop
+@enduml

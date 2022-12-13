@@ -1,0 +1,22 @@
+@startuml
+|Kreditur|
+start
+:open mobile app;
+|Mobile App|
+:show register page;
+|Kreditur|
+:input data diri, email, no telepon, foto ktp;
+|Mobile App|
+
+:send validation no telepon with OTP via SMS;
+|Kreditur|
+:receive OTP via SMS;
+repeat
+:input OTP;
+|Mobile App|
+repeat while (valid ?) is (false)
+->
+:save Kreditur data;
+stop
+
+@enduml

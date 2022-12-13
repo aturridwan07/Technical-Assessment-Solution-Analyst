@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor kreditur as k
+actor accounting as acc
+actor admin as admin
+
+rectangle "Loan System"{
+k --> (Login)
+k --> (Register)
+k --> (Submit Personal Information)
+k --> (Apply Loan)
+k --> (Pay Bill)
+
+acc --> (Login)
+acc --> (Manage Loan)
+acc --> (Approve/Reject)
+
+admin --> (Manage User)
+admin --> (Manage Loan Products)
+
+
+(Biometric Login) .> (Login)
+(Password Login) .> (Login)
+}
+@enduml

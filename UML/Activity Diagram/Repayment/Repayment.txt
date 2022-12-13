@@ -1,0 +1,26 @@
+@startuml
+|Kreditur|
+start
+:open bill screen;
+|Mobile App|
+:show bill screen
+(active loan, history loan);
+|Kreditur|
+:choose active loan;
+|Mobile App|
+:show active bill information;
+|Kreditur|
+:click pay bill;
+|Mobile App|
+:show payment methods;
+|Kreditur|
+:choose payment method;
+|Mobile App|
+:show payment instruction;
+|Kreditur|
+:Pay Bill (based on payment method choosed);
+|Mobile App|
+:Show pushed notification payment succeed;
+
+stop;
+@enduml

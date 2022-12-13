@@ -1,0 +1,18 @@
+@startuml
+|Kreditur|
+start
+:open mobile app;
+|Mobile App|
+:show login page;
+|Kreditur|
+:inputbiometric;
+|Mobile App|
+:login validation with biometric;
+if(valid?) is (true) then
+:show dashboard;
+stop
+else (false)
+:show login page;
+endif
+stop
+@enduml

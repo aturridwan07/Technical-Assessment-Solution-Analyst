@@ -1,0 +1,44 @@
+@startuml
+|Kreditur|
+start
+:login;
+|Mobile App|
+if(submited personal info ?) is (true) then
+:show loan products;
+|Kreditur|
+:choose loan 
+product;
+|Mobile App|
+:check is there active loan;
+if (has active loan ?) is (true) then
+:show alert Kreditur has active loan;
+stop;
+else (false)
+endif
+:show loan information 
+(tenour, interests, 
+repayment amount, due date);
+|Kreditur|
+:Confirm Apply Loan;
+|Mobile App|
+:sent OTP via SMS;
+|Kreditur|
+:receive OTP via SMS;
+:input OTP;
+|Mobile App|
+:submit loan application;
+:check loan approved or rejected;
+if(approved) is (true) then
+:sent email and SMS 
+notification loan approved;
+stop
+else (false)
+:sent email and SMS 
+notification loan rejected;
+stop
+endif
+else (false)
+:show form 
+personal information;
+stop;
+@enduml
